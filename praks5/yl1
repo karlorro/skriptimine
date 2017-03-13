@@ -1,9 +1,12 @@
 #!/bin/bash
 # 10 arvude trykkimine
 
+summa=0
 for i in {1..10}
 do
-	echo $i
+	# echo -n $i "
+	summa=$(($summa+$i))
 done
-
-#skripti lõpp
+echo
+echo "$i arvude SUMMA on $summa"
+#skripti lopp
