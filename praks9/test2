@@ -1,0 +1,18 @@
+#!/bin/bash
+
+rida=0
+tarnid=0
+echo "Sisesta ridade arv: "
+read rida
+echo "Sisesta tarnide arv: "
+read tarnid
+for (( i = 1; i <= $rida; i++ )) #
+do
+	echo -n "$i"	#rida algab numbriga
+	#echo -n ". "
+	for (( j = 1 ; j <= $tarnid; j++ ))
+	do
+		echo -n "*" 	#echob mida miel ridadele vaja on
+	done
+	echo
+done
