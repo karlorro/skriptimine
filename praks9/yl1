@@ -1,0 +1,21 @@
+#!/bin/bash
+#Viis rida viie tärniga ja read on loetletud
+
+
+for i in {1..5} #Jooksutab loopi viis korda
+do
+	echo -n "$i."
+	for (( j = 1 ; j <= 5; j++ )) #Kirjutab tärni viis korda
+
+	do
+
+		echo -n "*"
+done
+
+echo "" #Uus tühi rida
+
+done
+
+#Skripti lõpp
+
+
