@@ -3,13 +3,14 @@
 # ip järgi arvuti kontrollimine
 #for ((nr=1; nr<=10; nr++))
 
-echo -n "Sisesta vahemiku algus"
+echo -n "Sisesta vahemiku algus: "
 
 read algus
 
-echo -n "Sisesta vahemiku lopp"
+echo -n "Sisesta vahemiku lopp: "
 
 read lopp
+echo -n > ping_tulemus
 for((nr=$algus; nr<=$lopp; nr++))
 #for ip in 172.23.13.{20..50}
 do
@@ -19,9 +20,9 @@ do
 	# kontrollime ping käsu tulemust, kas läks läbi
 	if [ $? -eq 0 ]; then
 	  #kui $? on 0 - korras
-	echo "$ip - ok"
+	echo "$ip - ok" >> ping_tulemus
 	#muidu
 	else
-	echo "$ip  - not"	
+	echo "$ip  - not" >> ping_tulemus	
 fi # if lause lõpp
 done
