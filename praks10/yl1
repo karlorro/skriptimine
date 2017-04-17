@@ -1,0 +1,20 @@
+#!/bin/bash
+# Sisestab kasutajale teate vastavalt sisestatud kellaajale
+
+number=0
+
+		echo -n " Sisesta tund: "
+	read number 
+	if [ $number -ge 6 -a $number -lt 12 ]; then
+	echo "Tere Hommikust"
+elif	[ $number -ge 12 -a $number -lt 18 ]; then
+	echo "Tere Paevast "
+elif	[ $number -ge 18 -a $number -lt 22 ]; then
+	echo "Tere Ohtust"
+elif	[ $number -ge 22 -a $number -lt 24 ] || [ $number -ge 0 -a $number -lt 6 ]; then
+	echo "Head Ood"
+else
+	echo "Vale sisend"
+fi
+
+# skripti lopp
